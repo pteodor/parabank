@@ -1,0 +1,261 @@
+# Created at 2023-04-17T16:27:05.119
+Thread dump for process (7444@ulfar) after 30 seconds shutdown timeout:
+"main" 
+   java.lang.Thread.State: WAITING
+        at java.base@11.0.10/java.lang.Object.wait(Native Method)
+        at java.base@11.0.10/java.lang.Thread.join(Thread.java:1305)
+        at java.base@11.0.10/java.lang.Thread.join(Thread.java:1379)
+        at java.base@11.0.10/java.lang.ApplicationShutdownHooks.runHooks(ApplicationShutdownHooks.java:107)
+        at java.base@11.0.10/java.lang.ApplicationShutdownHooks$1.run(ApplicationShutdownHooks.java:46)
+        at java.base@11.0.10/java.lang.Shutdown.runHooks(Shutdown.java:130)
+        at java.base@11.0.10/java.lang.Shutdown.exit(Shutdown.java:174)
+        at java.base@11.0.10/java.lang.Runtime.exit(Runtime.java:113)
+        at java.base@11.0.10/java.lang.System.exit(System.java:1750)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.acknowledgedExit(ForkedBooter.java:450)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:190)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.10/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@11.0.10/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+        at java.base@11.0.10/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@11.0.10/java.lang.Object.wait(Native Method)
+        at java.base@11.0.10/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@11.0.10/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+        at java.base@11.0.10/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11.0.10/java.lang.Object.wait(Native Method)
+        at java.base@11.0.10/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@11.0.10/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+        at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+        at java.base@11.0.10/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+
+"Log4j2-TF-2-Scheduled-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+        at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+        at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+        at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+        at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"HSQLDB Server @2342f1ff" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.10/java.net.PlainSocketImpl.waitForNewConnection(Native Method)
+        at java.base@11.0.10/java.net.PlainSocketImpl.socketAccept(PlainSocketImpl.java:163)
+        at java.base@11.0.10/java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:458)
+        at java.base@11.0.10/java.net.ServerSocket.implAccept(ServerSocket.java:551)
+        at java.base@11.0.10/java.net.ServerSocket.accept(ServerSocket.java:519)
+        at app//org.hsqldb.server.Server.run(Unknown Source)
+        at app//org.hsqldb.server.Server.access$000(Unknown Source)
+        at app//org.hsqldb.server.Server$ServerThread.run(Unknown Source)
+
+"HSQLDB Timer @7db4189" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11.0.10/java.lang.Object.wait(Native Method)
+        at app//org.hsqldb.lib.HsqlTimer$TaskQueue.park(Unknown Source)
+        at app//org.hsqldb.lib.HsqlTimer.nextTask(Unknown Source)
+        at app//org.hsqldb.lib.HsqlTimer$TaskRunner.run(Unknown Source)
+        at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"HSQLDB Server @47fb038d" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.10/java.net.PlainSocketImpl.waitForNewConnection(Native Method)
+        at java.base@11.0.10/java.net.PlainSocketImpl.socketAccept(PlainSocketImpl.java:163)
+        at java.base@11.0.10/java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:458)
+        at java.base@11.0.10/java.net.ServerSocket.implAccept(ServerSocket.java:551)
+        at java.base@11.0.10/java.net.ServerSocket.accept(ServerSocket.java:519)
+        at app//org.hsqldb.server.Server.run(Unknown Source)
+        at app//org.hsqldb.server.Server.access$000(Unknown Source)
+        at app//org.hsqldb.server.Server$ServerThread.run(Unknown Source)
+
+"timerFactory-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@11.0.10/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+        at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+        at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+        at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+        at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"ForkJoinPool.commonPool-worker-19" 
+   java.lang.Thread.State: WAITING
+        at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+        at java.base@11.0.10/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1628)
+        at java.base@11.0.10/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+"jmsListener-1" 
+   java.lang.Thread.State: BLOCKED
+        at app//org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1144)
+        at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"jmsListener-2" 
+   java.lang.Thread.State: BLOCKED
+        at app//org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1144)
+        at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"jmsListener-3" 
+   java.lang.Thread.State: BLOCKED
+        at app//org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1144)
+        at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"jmsListener-4" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11.0.10/java.lang.Object.wait(Native Method)
+        at app//org.springframework.jms.listener.DefaultMessageListenerContainer.applyBackOffTime(DefaultMessageListenerContainer.java:1056)
+        at app//org.springframework.jms.listener.DefaultMessageListenerContainer.refreshConnectionUntilSuccessful(DefaultMessageListenerContainer.java:1010)
+        at app//org.springframework.jms.listener.DefaultMessageListenerContainer.recoverAfterListenerSetupFailure(DefaultMessageListenerContainer.java:959)
+        at app//org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1146)
+        at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"jmsListener-5" 
+   java.lang.Thread.State: BLOCKED
+        at app//org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1144)
+        at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"HSQLDB Connection @20fac513" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.10/java.net.SocketInputStream.socketRead0(Native Method)
+        at java.base@11.0.10/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+        at java.base@11.0.10/java.net.SocketInputStream.read(SocketInputStream.java:168)
+        at java.base@11.0.10/java.net.SocketInputStream.read(SocketInputStream.java:140)
+        at java.base@11.0.10/java.io.BufferedInputStream.fill(BufferedInputStream.java:252)
+        at java.base@11.0.10/java.io.BufferedInputStream.read(BufferedInputStream.java:271)
+        at java.base@11.0.10/java.io.DataInputStream.readByte(DataInputStream.java:270)
+        at app//org.hsqldb.server.ServerConnection.run(Unknown Source)
+        at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"surefire-forkedjvm-last-ditch-daemon-shutdown-thread-30s" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@11.0.10/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@11.0.10/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:197)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:683)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:80)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$7.run(ForkedBooter.java:499)
+        at java.base@11.0.10/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+        at java.base@11.0.10/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base@11.0.10/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+        at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"SpringContextShutdownHook" 
+   java.lang.Thread.State: BLOCKED
+        at app//org.hsqldb.Session.close(Unknown Source)
+        at app//org.hsqldb.server.ServerConnection.close(Unknown Source)
+        at app//org.hsqldb.server.ServerConnection.signalClose(Unknown Source)
+        at app//org.hsqldb.server.Server.signalCloseAllServerConnections(Unknown Source)
+        at app//com.parasoft.parabank.util.ServerBean.shutdownHSQLDBServer(ServerBean.java:290)
+        at app//com.parasoft.parabank.util.ServerBean.destroy(ServerBean.java:108)
+        at java.base@11.0.10/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base@11.0.10/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base@11.0.10/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base@11.0.10/java.lang.reflect.Method.invoke(Method.java:566)
+        at app//org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+        at app//org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+        at app//org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+        at app//org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197)
+        at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+        at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+        at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1163)
+        at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+        at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1156)
+        at app//org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+        at app//org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+        at app//org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:991)
+
+"SpringContextShutdownHook" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.10/java.net.SocketInputStream.socketRead0(Native Method)
+        at java.base@11.0.10/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+        at java.base@11.0.10/java.net.SocketInputStream.read(SocketInputStream.java:168)
+        at java.base@11.0.10/java.net.SocketInputStream.read(SocketInputStream.java:140)
+        at java.base@11.0.10/java.io.BufferedInputStream.fill(BufferedInputStream.java:252)
+        at java.base@11.0.10/java.io.BufferedInputStream.read(BufferedInputStream.java:271)
+        at java.base@11.0.10/java.io.DataInputStream.readByte(DataInputStream.java:270)
+        at app//org.hsqldb.result.Result.newResult(Unknown Source)
+        at app//org.hsqldb.ClientConnection.read(Unknown Source)
+        at app//org.hsqldb.ClientConnection.execute(Unknown Source)
+        at app//org.hsqldb.jdbc.JDBCStatement.fetchResult(Unknown Source)
+        at app//org.hsqldb.jdbc.JDBCStatement.execute(Unknown Source)
+        at app//com.parasoft.parabank.util.ServerBean.shutdownHSQLDBServer(ServerBean.java:276)
+        at app//com.parasoft.parabank.util.ServerBean.destroy(ServerBean.java:108)
+        at java.base@11.0.10/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base@11.0.10/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base@11.0.10/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base@11.0.10/java.lang.reflect.Method.invoke(Method.java:566)
+        at app//org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+        at app//org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+        at app//org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+        at app//org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197)
+        at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+        at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+        at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1163)
+        at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+        at app//org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1156)
+        at app//org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+        at app//org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+        at app//org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:991)
+
+"ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:62616@55280" 
+   java.lang.Thread.State: WAITING
+        at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+        at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+        at java.base@11.0.10/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+        at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+        at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+        at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:62616@56665" 
+   java.lang.Thread.State: WAITING
+        at java.base@11.0.10/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@11.0.10/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+        at java.base@11.0.10/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+        at java.base@11.0.10/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+        at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+        at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+        at java.base@11.0.10/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+"HSQLDB Connection @2e874074" 
+   java.lang.Thread.State: BLOCKED
+        at app//org.hsqldb.server.Server.releaseDatabase(Unknown Source)
+        at app//org.hsqldb.server.Server.notify(Unknown Source)
+        at app//org.hsqldb.DatabaseManager.notifyServers(Unknown Source)
+        at app//org.hsqldb.DatabaseManager.removeDatabase(Unknown Source)
+        at app//org.hsqldb.Database.close(Unknown Source)
+        at app//org.hsqldb.StatementCommand.getResult(Unknown Source)
+        at app//org.hsqldb.StatementCommand.execute(Unknown Source)
+        at app//org.hsqldb.Session.executeCompiledStatement(Unknown Source)
+        at app//org.hsqldb.Session.executeDirectStatement(Unknown Source)
+        at app//org.hsqldb.Session.execute(Unknown Source)
+        at app//org.hsqldb.server.ServerConnection.receiveResult(Unknown Source)
+        at app//org.hsqldb.server.ServerConnection.access$200(Unknown Source)
+        at app//org.hsqldb.server.ServerConnection$HsqlInResultProcessor.receiveResult(Unknown Source)
+        at app//org.hsqldb.server.ServerConnection.run(Unknown Source)
+        at java.base@11.0.10/java.lang.Thread.run(Thread.java:834)
+
+
+
