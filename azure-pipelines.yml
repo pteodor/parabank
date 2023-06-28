@@ -4,12 +4,15 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- main
+  - main
 
+# Specifies the type of runner that the pipeline will run on.
 pool:
-  vmImage: ubuntu-latest
+  name: Default
 
 steps:
+
+# Configures your Maven project.  
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -17,6 +20,26 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    goals: 'install jtest:jtest'
+    options: '-Djtest.skip=true'
+
+# Runs code analysis with Jtest.   
+- task: RunJtest@1
+  inputs:
+    workingDir: '$(Build.Repository.LocalPath)'
+    dataJson: 'target/jtest/jtest.data.json'
+
+
+# Uploads analysis results in the SARIF format, so that they can be accessed in the 'Scans' tab.
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'reports/report.sarif'
+    ArtifactName: 'CodeAnalysisLogs'
+    publishLocation: 'Container'
+
+# Uploads all report files (.xml, .html, .sarif) as build artifacts.
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'reports'
+    ArtifactName: 'JtestReports'
+    publishLocation: 'Container'
