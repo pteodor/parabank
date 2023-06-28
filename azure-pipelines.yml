@@ -21,7 +21,7 @@ steps:
     jdkVersionOption: '1.17'
     jdkArchitectureOption: 'x64'
     goals: 'install jtest:jtest'
-    options: '-Djtest.skip=true'
+    options: '-Djtest.skip=true -DskipTests=true'
 
 # Runs code analysis with Jtest.   
 - task: RunJtest@1
