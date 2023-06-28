@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  name: ALCHEMIST
+  name: default
 
 steps:
 - task: Maven@3
