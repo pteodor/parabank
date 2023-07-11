@@ -20,5 +20,5 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.17'
     jdkArchitectureOption: 'x64'
-    goals: 'clean test-compile jtest:agent test jtest:jtest -Djtest.config="builtin://Unit Tests"'
+    goals: 'clean test-compile jtest:agent test jtest:jtest -Djtest.config="user://UnitTests"'
     
