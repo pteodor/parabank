@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-  - main
+  - none
 
 # Specifies the type of runner that the pipeline will run on.
 pool:
