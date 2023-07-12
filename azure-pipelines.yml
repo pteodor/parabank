@@ -28,7 +28,7 @@ steps:
   inputs:
     workingDir: '$(Build.Repository.LocalPath)'
     dataJson: 'target/jtest/jtest.data.json'
-    testConfig: 'builtin://CERT for Java'
+    testConfig: 'builtin://OWASP Top 10-2021'
 
 
 # Uploads analysis results in the SARIF format, so that they can be accessed in the 'Scans' tab.
