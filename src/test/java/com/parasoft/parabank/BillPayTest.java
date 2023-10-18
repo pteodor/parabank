@@ -27,7 +27,7 @@ public class BillPayTest {
 	 */
 	private static final String PARABANK_BASE_URL = "http://localhost:8080";
 	private static final String CHROME_DRIVER = "/opt/selenium/chromedriver-118.0.5993.70";
-	private static final String GRID_URL = "http://127.0.0.1:4444/wd/hub";
+	private static final String GRID_URL = "http://test:5444/wd/hub";
 
 	private RemoteWebDriver driver;
 
