@@ -33,7 +33,7 @@ public class BillPayTest {
 
 	@BeforeEach
 	public void beforeTest() {
-		System.setProperty("webdriver.chrome.driver", CHROME_DRIVER);
+	//	System.setProperty("webdriver.chrome.driver", CHROME_DRIVER);
 		ChromeOptions opts = new ChromeOptions();
 		Map<String, Object> prefs = new HashMap<String, Object>();
 		prefs.put("profile.managed_default_content_settings.geolocation", 2);
