@@ -45,6 +45,7 @@ public class BillPayTest {
 		opts.addArguments("--enable-strict-powerful-feature-restrictions");
 		opts.addArguments("--ignore-ssl-errors=yes");
 		opts.addArguments("--ignore-certificate-errors");
+                opts.setBrowserVersion("118.0.5993.70");
 		// opts.addArguments("--headless"); // Run in headless mode
         // opts.addArguments("--disable-gpu"); // Disable GPU for headless
 		try {
