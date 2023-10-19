@@ -3,6 +3,9 @@ services:
   selenium-chrome:
     image: selenium/standalone-chrome:latest
     container_name: selenium-chrome
+    environment:
+      - UID=${jenkins_uid}
+      - GID=${jenkins_gid}
     ports:
       - 4444:4444
     networks:
@@ -11,6 +14,9 @@ services:
   selenic:
     image: pteodor/selenic:4.0
     container_name: selenic
+    environment:
+      - UID=${jenkins_uid}
+      - GID=${jenkins_gid}
     networks:
       - mynetwork
     ports:
