@@ -18,7 +18,7 @@ services:
     volumes:
       - $PWD/parabank-jenkins:/home/parasoft/jenkins/parabank-jenkins
       - $PWD/parabank-selenic:/home/parasoft/jenkins/parabank-selenic
-    working_dir: /home/parasoft/jenkins/parabank
+    working_dir: /home/parasoft/jenkins/parabank-selenic
     #entrypoint: ["mvn", "test"]
     command: >
       sh -c "/usr/local/tomcat/bin/startup.sh && mvn test"
