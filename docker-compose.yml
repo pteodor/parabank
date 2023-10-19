@@ -12,7 +12,7 @@ services:
     working_dir: /home/parasoft/jenkins/parabank-selenic
     #entrypoint: ["mvn", "test"]
     command: >
-      sh -c "/usr/local/tomcat/bin/startup.sh && mvn test"
+      sh -c "/home/parasoft/tomcat/bin/startup.sh && mvn test"
     stdin_open: true 
     tty: true
   selenium-chrome:
