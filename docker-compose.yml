@@ -1,16 +1,14 @@
 version: '3'
 services:
   selenic:
+    user: 995:991
     image: pteodor/selenic:4.0
     container_name: selenic
-    environment:
-      - UID=995
-      - GID=991
     networks:
       - mynetwork
     volumes:
-      - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic)/parabank-jenkins:/home/parasoft/jenkins/parabank-jenkins
-      - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic)/parabank-selenic:/home/parasoft/jenkins/parabank-selenic
+      - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic main)/parabank-jenkins:/home/parasoft/jenkins/parabank-jenkins
+      - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic main)/parabank-selenic:/home/parasoft/jenkins/parabank-selenic
     working_dir: /home/parasoft/jenkins/parabank-selenic
     #entrypoint: ["mvn", "test"]
     command: >
@@ -18,11 +16,9 @@ services:
     stdin_open: true 
     tty: true
   selenium-chrome:
+    user: 995:991
     image: selenium/standalone-chrome:latest
     container_name: selenium-chrome
-    environment:
-      - UID=995
-      - GID=991
     networks:
       - mynetwork
 networks:
