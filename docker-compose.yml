@@ -9,8 +9,8 @@ services:
     networks:
       - mynetwork
     volumes:
-      - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic main branch)/parabank-jenkins:/home/parasoft/jenkins/parabank-jenkins
-      - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic main branch)/parabank-selenic:/home/parasoft/jenkins/parabank-selenic
+      - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic)/parabank-jenkins:/home/parasoft/jenkins/parabank-jenkins
+      - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic)/parabank-selenic:/home/parasoft/jenkins/parabank-selenic
     working_dir: /home/parasoft/jenkins/parabank-selenic
     #entrypoint: ["mvn", "test"]
     command: >
