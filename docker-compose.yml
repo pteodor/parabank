@@ -3,6 +3,9 @@ services:
   selenic:
     image: pteodor/selenic:4.0
     container_name: selenic
+    environment:
+      - UID=995
+      - GID=991
     networks:
       - mynetwork
     volumes:
@@ -17,6 +20,9 @@ services:
   selenium-chrome:
     image: selenium/standalone-chrome:latest
     container_name: selenium-chrome
+    environment:
+      - UID=995
+      - GID=991
     networks:
       - mynetwork
 networks:
