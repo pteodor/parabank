@@ -9,7 +9,7 @@ services:
       - mynetwork
 
   selenic:
-    image: mvn-selenic:1.0
+    image: pteodor/selenic:4.0
     container_name: selenic
     networks:
       - mynetwork
