@@ -1,0 +1,28 @@
+version: '3'
+services:
+  selenium-chrome:
+    image: selenium/standalone-chrome:latest
+    container_name: selenium-chrome
+    ports:
+      - 4444:4444
+    networks:
+      - mynetwork
+
+  selenic:
+    image: mvn-selenic:1.0
+    container_name: selenic
+    networks:
+      - mynetwork
+    ports:
+      - 28080:8080
+    volumes:
+      - /c/home/projects/jenkins_workflow/code/parabank-jenkins:/home/parasoft/jenkins/parabank-jenkins
+      - /c/home/projects/jenkins_workflow/code/parabank:/home/parasoft/jenkins/parabank
+    working_dir: /home/parasoft/jenkins/parabank
+    #entrypoint: ["mvn", "test"]
+    command: >
+      sh -c "/usr/local/tomcat/bin/startup.sh && mvn test"
+    stdin_open: true 
+    tty: true
+networks:
+  mynetwork:       
