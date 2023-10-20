@@ -10,8 +10,10 @@ services:
       - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic main)/parabank-jenkins:/home/parasoft/jenkins/parabank-jenkins
       - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic main)/parabank:/home/parasoft/jenkins/parabank
     working_dir: /home/parasoft/jenkins/parabank
-    command: sh -c "mvn test && touch /tmp/selenic_finished"
-    stdin_open: true
+    #entrypoint: ["mvn", "test"]
+    command: >
+      sh -c "mvn test"
+    stdin_open: true 
     tty: true
   selenium-chrome:
     user: 995:991
@@ -19,10 +21,6 @@ services:
     container_name: selenium-chrome
     networks:
       - demo-net
-    depends_on:
-      - selenic
-    command: sh -c "while [ ! -f /tmp/selenic_finished ]; do sleep 1; done"
 networks:
-  demo-net:
-    external: true
-
+  demo-net:  
+    external: true     
