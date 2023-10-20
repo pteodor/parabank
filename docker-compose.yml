@@ -8,7 +8,7 @@ services:
       - demo-net
     volumes:
       - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic main)/parabank-jenkins:/home/parasoft/jenkins/parabank-jenkins
-      - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic main)/parabank-selenic:/home/parasoft/jenkins/parabank-selenic
+      - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic main)/parabank:/home/parasoft/jenkins/parabank
     working_dir: /home/parasoft/jenkins/parabank-selenic
     #entrypoint: ["mvn", "test"]
     command: >
