@@ -24,7 +24,7 @@ public class LoginLogoutTest {
 	 * Use -DPARABANK_BASE_URL=http://localhost:8080 from command line
 	 * or use System.setProperty("PARABANK_BASE_URL", "http://localhost:8080") to change base URL at run time.
 	 */
-	private static final String PARABANK_BASE_URL = "http://selenic:8080";
+	private static final String PARABANK_BASE_URL = "http://parabank-baseline:8080";
 	private static final String CHROME_DRIVER = "/opt/selenium/chromedriver-118.0.5993.70";
 	private static final String GRID_URL = "http://selenium-chrome:4444/wd/hub";
 	

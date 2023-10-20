@@ -5,14 +5,14 @@ services:
     image: pteodor/selenic:6.0
     container_name: selenic
     networks:
-      - mynetwork
+      - demo-net
     volumes:
       - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic main)/parabank-jenkins:/home/parasoft/jenkins/parabank-jenkins
       - /var/lib/jenkins/workspace/Testing Jobs/Parabank-Jenkins (Pawel-Selenic main)/parabank-selenic:/home/parasoft/jenkins/parabank-selenic
     working_dir: /home/parasoft/jenkins/parabank-selenic
     #entrypoint: ["mvn", "test"]
     command: >
-      sh -c "/home/parasoft/tomcat/bin/startup.sh && mvn test"
+      sh -c "mvn test"
     stdin_open: true 
     tty: true
   selenium-chrome:
@@ -20,6 +20,7 @@ services:
     image: selenium/standalone-chrome:latest
     container_name: selenium-chrome
     networks:
-      - mynetwork
+      - demo-net
 networks:
-  mynetwork:       
+  demo-net:  
+    external: true     
