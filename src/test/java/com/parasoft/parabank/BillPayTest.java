@@ -46,8 +46,9 @@ public class BillPayTest {
 		opts.addArguments("--ignore-ssl-errors=yes");
 		opts.addArguments("--ignore-certificate-errors");
         //      opts.setBrowserVersion("118.0.5993.70");
-		// opts.addArguments("--headless"); // Run in headless mode
-        // opts.addArguments("--disable-gpu"); // Disable GPU for headless
+		opts.addArguments("--headless"); // Run in headless mode
+                opts.addArguments("--disable-gpu"); // Disable GPU for headless
+                opts.addArguments("--no-sandbox");
 		try {
 			driver = new RemoteWebDriver(new URL(GRID_URL), opts);
 	        } catch (MalformedURLException e) {
