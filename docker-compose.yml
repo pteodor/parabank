@@ -12,7 +12,7 @@ services:
     working_dir: /home/parasoft/jenkins/parabank
     #entrypoint: ["mvn", "test"]
     command: >
-      sh -c "mvn test"
+      sh -c "mvn test -DargLine=-javaagent:/selenic/selenic_agent.jar=captureDom=true"
     stdin_open: true 
     tty: true
   selenium-chrome:
