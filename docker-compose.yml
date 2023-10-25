@@ -2,7 +2,7 @@ version: '3'
 services:
   selenic:
     user: 995:991
-    image: pteodor/selenic:6.0
+    image: pteodor/selenic:7.0
     container_name: selenic
     networks:
       - demo-net
