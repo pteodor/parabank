@@ -29,10 +29,10 @@ steps:
     workingDir: '$(Build.Repository.LocalPath)'
     dataJson: 'target/jtest/jtest.data.json'
     testConfig: 'builtin://OWASP Top 10-2021'
-- task: PublishParasoftTestResults@1
-  inputs:
-    testRunner: 'XTest10x'
-    testResultsFiles: '**/rep*.xml'
+#- task: PublishParasoftTestResults@1
+#  inputs:
+#    testRunner: 'XTest10x'
+#    testResultsFiles: '**/rep*.xml'
 
 
 # Uploads analysis results in the SARIF format, so that they can be accessed in the 'Scans' tab.
