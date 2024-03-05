@@ -43,8 +43,8 @@ steps:
     publishLocation: 'Container'
 
 # Uploads all report files (.xml, .html, .sarif) as build artifacts.
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: 'reports'
-    ArtifactName: 'JtestReports'
-    publishLocation: 'Container'
+#- task: PublishBuildArtifacts@1
+#  inputs:
+#    PathtoPublish: 'reports'
+#    ArtifactName: 'JtestReports'
+#    publishLocation: 'Container'
