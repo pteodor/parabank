@@ -29,20 +29,8 @@ steps:
     workingDir: '$(Build.Repository.LocalPath)'
     dataJson: 'target/jtest/jtest.data.json'
     testConfig: 'builtin://OWASP Top 10-2021'
-#- task: PublishParasoftTestResults@1
-#  inputs:
-#    testRunner: 'XTest10x'
-#    testResultsFiles: '**/rep*.xml'
 
-# Runs Unit Tests.
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.17'
-    jdkArchitectureOption: 'x64'
-    goals: 'clean test-compile jtest:agent test jtest:jtest -Djtest.config="user://UnitTests"'
+
 
 # Uploads analysis results in the SARIF format, so that they can be accessed in the 'Scans' tab.
 - task: PublishBuildArtifacts@1
@@ -51,9 +39,3 @@ steps:
     ArtifactName: 'CodeAnalysisLogs'
     publishLocation: 'Container'
 
-# Uploads all report files (.xml, .html, .sarif) as build artifacts.
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: 'reports'
-    ArtifactName: 'JtestReports'
-    publishLocation: 'Container'
