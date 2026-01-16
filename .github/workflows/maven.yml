@@ -43,6 +43,12 @@ jobs:
       uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: reports/report.sarif
+    - name: Archive reports
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: Static analysis reports
+        path: reports/*.*
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 
