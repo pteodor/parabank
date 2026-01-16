@@ -29,7 +29,7 @@ jobs:
     - name: Checkout Parabnk project
       uses: actions/checkout@v4
     - name: Create input for Jtest
-      run: mvn clean install jtest:jtest -s C:/actions-runner/git/settings.xml -Djtest.skip=true
+      run: mvn clean install jtest:jtest -s C:/actions-runner/git/settings.xml "-DskipTests=true" "-Djtest.skip=true"
     - name: Run Jtest
       id: jtest
       uses: parasoft/run-jtest-action@2.0.2
