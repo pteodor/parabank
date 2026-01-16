@@ -36,7 +36,13 @@ jobs:
       with:
         #Uses the jtest.data.json generated with the Maven command in the previous step
         installDir: 'C:/parasoft/jtest_2025.2'
+        testConfig: 'builtin://CWE Top 25 2024'
         input: target/jtest/jtest.data.json
+    - name: Upload results (SARIF)
+      if: always()
+      uses: github/codeql-action/upload-sarif@v3
+      with:
+        sarif_file: reports/report.sarif
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 
