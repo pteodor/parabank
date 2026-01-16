@@ -26,9 +26,16 @@ jobs:
     runs-on: self-hosted
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build with Maven
-      run: mvn clean compile -DskipTests=true
+    - name: Checkout Parabnk project
+      uses: actions/checkout@v4
+    - name: Create input for Jtest
+      run: mvn clean install jtest:jtest "-Djtest.skip=true"
+    - name: Run Jtest
+      id: jtest
+      uses: parasoft/run-jtest-action@2.0.2
+      with:
+        #Uses the jtest.data.json generated with the Maven command in the previous step
+        input: target/jtest/jtest.data.json
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 
